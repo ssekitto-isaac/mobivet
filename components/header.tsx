@@ -97,19 +97,6 @@ export function Header() {
             </nav>
 
             <div className="flex items-center gap-4">
-              <motion.div
-                className="hidden md:block"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all">
-                  Get Started
-                </Button>
-              </motion.div>
-
               {/* Mobile Menu Button */}
               <motion.button
                 className="md:hidden p-2 text-foreground"
@@ -154,18 +141,6 @@ export function Header() {
               </Link>
             </motion.div>
           ))}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{
-              opacity: isMobileMenuOpen ? 1 : 0,
-              y: isMobileMenuOpen ? 0 : 20,
-            }}
-            transition={{ delay: 0.3, duration: 0.3 }}
-          >
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg">
-              Get Started
-            </Button>
-          </motion.div>
         </div>
       </motion.div>
     </>
